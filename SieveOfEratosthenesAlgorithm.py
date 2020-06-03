@@ -14,7 +14,7 @@ def findAllPrimeNumbers(N):
 
     for i in range(2, int(math.sqrt(N))+1):
         if numberList[i] == 1:
-            for j in range(2, N+1):
+            for j in range(i*i, N+1, i):
                 if i*j <= N:
                     # Marking all the factors of a number to zero as they cannot be prime numbers
                     numberList[i*j] = 0
